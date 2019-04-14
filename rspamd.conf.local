@@ -1,0 +1,7 @@
+# rspamd.conf.local
+
+cyren { 
+    .include(try=true,priority=5) "${DBDIR}/dynamic/cyren.conf"
+    .include(try=true,priority=1,duplicate=merge) "$LOCAL_CONFDIR/local.d/cyren.conf"
+    .include(try=true,priority=10) "$LOCAL_CONFDIR/override.d/cyren.conf"
+}
