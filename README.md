@@ -8,7 +8,7 @@ The cyren lua plugin allow you to add Cyren checks through a Cyren scanning gate
 
 ### Installation
 
-- Copy `plugins/lua/cyren.lua` module to your rspamd `plugins/lua` directory
+- Copy `plugins/lua/cyren.lua` module to your rspamd `$PLUGINSDIR` directory
 - Copy `local.d/cyren*` files to your rspamd `local.d` directory
 - Copy or merge `local.d/groups.conf` content with your existing `local.d/groups.conf`
 - Edit `local.d/cyren.conf` to set your Cyren gateway url
