@@ -16,6 +16,7 @@ local opts = rspamd_config:get_all_opt(N)
 
 -- Default settings
 local cfg_url = "http://localhost:8088"
+local cfg_timeout = 5
 
 local function check_cyren(task)
     local function check_cyren_cb(err, code, body, headers)
@@ -77,7 +78,10 @@ if opts then
     if opts.url then
         cfg_url = opts.url
     end
-
+    if opts.timeout then
+        cfg_timeout = opts.timeout
+    end
+  
     local id = rspamd_config:register_symbol({
         name = symbol_cyren,
         callback = check_cyren
